@@ -30,18 +30,19 @@ namespace EmployeeRepository.EmpRepository
                 com.Parameters.AddWithValue("@Address", obj.Address);
                 con.Open();
                 com.ExecuteNonQuery();
-                var i = com.ExecuteScalar();
-                if (i != null)
-                {
-                    Console.WriteLine("Employee added");
-                    obj.EmpId = Convert.ToInt32(i);
-                    Console.WriteLine(obj.EmpId);
-                    return obj;
-                }
-                else
-                {
-                    return null;
-                }
+                return obj;
+                //var i = com.ExecuteScalar();
+                //if (i != null)
+                //{
+                //    Console.WriteLine("Employee added");
+                //    obj.EmpId = Convert.ToInt32(i);
+                //    Console.WriteLine(obj.EmpId);
+                //    return obj;
+                //}
+                //else
+                //{
+                //    return null;
+                //}
             }
             catch (Exception ex)
             {

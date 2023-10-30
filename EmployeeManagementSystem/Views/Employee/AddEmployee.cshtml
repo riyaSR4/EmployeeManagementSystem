@@ -2,22 +2,31 @@
 @{
     ViewData["Title"] = "AddEmployee";
 }
-<div class="main-addemployee">
+<form method="post" >
+    <div class="main-addemployee">
+    
     <div class="text-center main-container" style=" width:70%">
         <h1 class="Title">Add Employee</h1>
         <div class="adjust">
+           @* <label asp-for = "@Model.Name">Name</label>
+            <input asp-for = "@Model.Name" />*@
+
             @Html.LabelFor(model => model.Name)
             <div>
                 @Html.EditorFor(model => model.Name)
             </div>
         </div>
         <div class="adjust">
+                @*<label asp-for="@Model.City">City</label>
+                <input asp-for="@Model.City" />*@
             @Html.LabelFor(model => model.City)
             <div>
                 @Html.EditorFor(model => model.City)
             </div>
         </div>
         <div class="adjust">
+                @*<label asp-for="@Model.Address">Address</label>
+                <input asp-for="@Model.Address" />*@
             @Html.LabelFor(model => model.Address)
             <div>
                 @Html.EditorFor(model => model.Address)
@@ -32,7 +41,9 @@
             </div>
         </div>
     </div>
+ 
 </div>
+</form>
 <style>
     .main-addemployee {
         display: flex;
